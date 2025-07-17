@@ -18,15 +18,22 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
-
-let result = "5" - 2;
+let result = Number("5") - 2;// Explicit conversion of numeric string to a number
 console.log("The result is: " + result);
 
 let isValid = Boolean("false");
+// Explicit conversion: using Boolean() to convert a string to a boolean; Already Correct
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+let age = Number("25"); // Explicit conversion of string to number
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+
+//Examples 
+let implicitConversion = "The answer is " + 86; // Implicit conversion: number to string during concatenation
+console.log(implicitConversion); // Output: "The answer is 86"
+
+let explicitConversion = String(38); // Explicit conversion: number to string
+console.log("Explicit conversion: " + explicitConversion); // Output: "Explicit conversion: 38"
